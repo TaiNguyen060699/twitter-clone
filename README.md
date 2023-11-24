@@ -1,75 +1,30 @@
-# Nuxt 3 Minimal Starter
+### Install packages
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+```shell
+npm i
+```
+### Setup .env file
 
-## Setup
+```js
+DATABASE_URL=
 
-Make sure to install the dependencies:
+JWT_ACCESS_TOKEN_SECRET=
+JWT_REFRESH_TOKEN_SECRET=
 
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
 ```
 
-## Development Server
+### Start the app
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+```shell
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+## Available commands
+Running commands with npm `npm run [command]`
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+| command         | description                              |
+| :-------------- | :--------------------------------------- |
+| `dev`           | Starts a development instance of the app |
