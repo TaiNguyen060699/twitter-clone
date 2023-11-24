@@ -4,11 +4,11 @@
       <UISpinner />
     </div>
     <div v-else>
-      <!-- <TweetItem
+      <TweetItem
         :tweet="props.replyTo"
         v-if="props.replyTo && props.showReply"
         hideActions
-      /> -->
+      />
       <TweetFormInput
         :placeholder="props.placeholder"
         :user="props.user"
@@ -50,7 +50,7 @@ async function handleFormSubmit(data) {
       replyTo: props.replyTo?.id,
     });
 
-    emits("onSuccess", response.tweet);
+    emits("onSuccess", response);
   } catch (error) {
     console.log(error);
   } finally {
