@@ -1,12 +1,12 @@
-import { getUserByUsername } from "@/server/db/users";
 import bcrypt from "bcrypt";
-import { generateTokens, sendRefreshToken } from "@/server/utils/jwt";
-import { userTransformer } from "@/server/transformers/user.js";
-import { createRefreshToken } from "@/server/transformers/refreshToken";
+import { getUserByUsername } from "../../db/users.js";
+import { generateTokens, sendRefreshToken } from "../../utils/jwt.js";
+import { userTransformer } from "~~/server/transformers/user.js";
+import { createRefreshToken } from "../../db/refreshTokens.js";
 import { sendError } from "h3";
 
 export default defineEventHandler(async (event) => {
-  const body = await useBody(event);
+  const body = await readBody(event);
 
   const { username, password } = body;
 
@@ -51,6 +51,7 @@ export default defineEventHandler(async (event) => {
     userId: user.id,
   });
 
+  console.log('event', event)
   sendRefreshToken(event, refreshToken);
 
   return {

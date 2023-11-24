@@ -1,4 +1,4 @@
-import prisma from '@/libs/prismadb'
+import { prisma } from '.'
 import bcrypt from "bcrypt";
 
 export const createUser = (userData) => {
